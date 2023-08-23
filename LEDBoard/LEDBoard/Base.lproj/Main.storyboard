@@ -37,6 +37,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="contentLabel" destination="zrX-7i-6N1" id="UXh-cU-oG4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -45,7 +48,7 @@
         <!--설정-->
         <scene sceneID="30l-gF-AP1">
             <objects>
-                <viewController id="Cb7-m1-bKp" sceneMemberID="viewController">
+                <viewController id="Cb7-m1-bKp" customClass="SettingViewController" customModule="LEDBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G71-Sb-H26">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,23 +81,32 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="hED-Ld-Okw">
                                         <rect key="frame" x="0.0" y="32.999999999999993" width="345" height="102.33333333333331"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m41-B2-OTd">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m41-B2-OTd">
                                                 <rect key="frame" x="0.0" y="0.0" width="102.33333333333333" height="102.33333333333333"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="m41-B2-OTd" secondAttribute="height" multiplier="1:1" id="Lqh-YA-aGk"/>
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="노랑색"/>
+                                                <state key="normal" image="yellow_circle"/>
+                                                <connections>
+                                                    <action selector="taptextColorButton:" destination="Cb7-m1-bKp" eventType="touchUpInside" id="QwV-Zi-tAf"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gr0-jL-Te8">
+                                            <button opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gr0-jL-Te8">
                                                 <rect key="frame" x="121.33333333333334" y="0.0" width="102.33333333333334" height="102.33333333333333"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="자주색"/>
+                                                <state key="normal" image="purple_circle"/>
+                                                <connections>
+                                                    <action selector="taptextColorButton:" destination="Cb7-m1-bKp" eventType="touchUpInside" id="0ux-24-6EZ"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oy0-Al-Y8e">
+                                            <button opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oy0-Al-Y8e">
                                                 <rect key="frame" x="242.66666666666671" y="0.0" width="102.33333333333334" height="102.33333333333333"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="초록색"/>
+                                                <state key="normal" image="green_circle"/>
+                                                <connections>
+                                                    <action selector="taptextColorButton:" destination="Cb7-m1-bKp" eventType="touchUpInside" id="dPz-DS-pfS"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -112,23 +124,32 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="l6P-ow-9b3">
                                         <rect key="frame" x="0.0" y="32.999999999999993" width="345" height="102.33333333333331"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5C-4k-lFI">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5C-4k-lFI">
                                                 <rect key="frame" x="0.0" y="0.0" width="102.33333333333333" height="102.33333333333333"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="B5C-4k-lFI" secondAttribute="height" multiplier="1:1" id="WC4-bk-if6"/>
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="검정색"/>
+                                                <state key="normal" image="black_circle"/>
+                                                <connections>
+                                                    <action selector="tapBackgroundColorButton:" destination="Cb7-m1-bKp" eventType="touchUpInside" id="Jgg-Mh-nGj"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qx-Go-ctk">
+                                            <button opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qx-Go-ctk">
                                                 <rect key="frame" x="121.33333333333334" y="0.0" width="102.33333333333334" height="102.33333333333333"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="파랑색"/>
+                                                <state key="normal" image="blue_circle"/>
+                                                <connections>
+                                                    <action selector="tapBackgroundColorButton:" destination="Cb7-m1-bKp" eventType="touchUpInside" id="4gr-OW-TfS"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6QU-ZL-wme">
+                                            <button opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6QU-ZL-wme">
                                                 <rect key="frame" x="242.66666666666671" y="0.0" width="102.33333333333334" height="102.33333333333333"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="주황색"/>
+                                                <state key="normal" image="orange_cricle"/>
+                                                <connections>
+                                                    <action selector="tapBackgroundColorButton:" destination="Cb7-m1-bKp" eventType="touchUpInside" id="q3w-M8-OZy"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -138,6 +159,9 @@
                                 <rect key="frame" x="181.66666666666666" y="536.66666666666663" width="30" height="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="저장"/>
+                                <connections>
+                                    <action selector="tapSaveButton:" destination="Cb7-m1-bKp" eventType="touchUpInside" id="0YX-bD-0T3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zQ7-Hv-zk8"/>
@@ -157,6 +181,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="설정" id="v8s-EG-beT"/>
+                    <connections>
+                        <outlet property="blackButton" destination="B5C-4k-lFI" id="9rS-sH-Zvi"/>
+                        <outlet property="blueButton" destination="9qx-Go-ctk" id="hqh-se-Tfa"/>
+                        <outlet property="greenButton" destination="oy0-Al-Y8e" id="6HU-R7-MBI"/>
+                        <outlet property="orangeButton" destination="6QU-ZL-wme" id="OjE-ii-uTz"/>
+                        <outlet property="purpleButton" destination="Gr0-jL-Te8" id="9I3-kc-8xJ"/>
+                        <outlet property="textField" destination="S3b-yH-o2Z" id="5nl-Yf-AtO"/>
+                        <outlet property="yelloButton" destination="m41-B2-OTd" id="UsP-OL-jxD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qik-Tn-lsR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -184,6 +217,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="black_circle" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="blue_circle" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="green_circle" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="orange_cricle" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="purple_circle" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="yellow_circle" width="42.666667938232422" height="42.666667938232422"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
